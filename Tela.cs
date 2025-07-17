@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using ProjetoXadrez.tabuleiro;
 using ProjetoXadrez.xadrez;
 
@@ -13,6 +14,10 @@ namespace ProjetoXadrez
             System.Console.WriteLine();
             System.Console.WriteLine("Turno: " + partida.Turno);
             System.Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
+            if (partida.Xeque)
+            {
+                System.Console.WriteLine("XEQUE!");
+            }
         }
 
         public static void ImprimirPecasCapturadas(PartidaDeXadrez partida)
